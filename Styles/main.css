@@ -1,0 +1,192 @@
+body{
+    margin: 0;
+    width: 100%;
+    font-family: system-ui;
+}
+
+header{
+    width: 96%;
+    padding: 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main{
+    text-align: center;
+    margin-bottom: 2%;
+}
+header > a > img{
+    height: 40px;
+    width: auto;
+}
+
+main > nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 4%;
+}
+
+main > h1 {
+    color: rgb(102,102,102);
+}
+
+.box{
+    width: 30%;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 8px rgb(183, 183, 183);
+}
+
+.border{
+    border: 1px solid rgb(202, 202, 202);
+    border-radius: 10px;
+}
+
+.box > h2{
+    transition: all 0.5s;
+    color: rgb(102,102,102);
+}
+
+.box > h2:hover {
+    cursor: pointer; 
+    color:rgb(128,106,155);
+    font-size:26px;  
+} 
+
+.socials-header{
+    display: flex;
+    justify-content: end;
+}
+.socials{
+    display: flex;
+    justify-content: center;
+}
+
+.socials-header > a {
+    width: 2%;
+    padding: 1%;
+}
+.socials > a {
+    width: 2%;
+    padding: 1%;
+}
+
+.socials-header > a > img {
+    width: 100%;
+}
+.socials > a > img {
+    width: 100%;
+}
+
+.card{
+    display: flex;
+    margin: 5%;
+    text-align: start;
+}
+
+.card > img{
+    width: 30%;
+    padding-right: 5%;
+}
+
+footer{
+    color: white;
+    background-color: rgb(128,106,155);
+    padding: 2%;
+    text-align: center;
+}
+
+footer > hr{
+    width: 30%;
+    align-self: self-start;
+}
+
+.cardText{
+    width: 70%;
+    font-size: large;
+}
+
+.cardText > h2{
+    color: rgb(128,106,155);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.awards{
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 2%;
+    font-size: 20px;
+}
+
+.awards > button {
+    padding: 1%;
+    font-size: large;
+    
+    color: white;
+    background-color: rgb(181,210,56);
+    border: 0;
+    border-radius: 2px;
+}
+.awards > button:hover{
+    cursor: pointer;
+    background-color: rgb(128,106,155);
+}
+
+.awards > h1 {
+    color: rgb(128,106,155);
+}
+
+.divider{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 5%;
+    border: 0;
+    border-top: 3px solid rgb(128,106,155);
+}
+
+.map{
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    height: 450px;
+    border-radius: 10px;
+}
+
+.mapTitle{
+    color: rgb(102,102,102);
+}
+
+/* 
+    purple: rgb(128,106,155)
+    green: rgb(181,210,56)
+    gray: rgb(102,102,102)
+*/
+
+/* 
+    hierro:
+        - celsa
+        - metaeles
+        - la farga 
+        - cortizo
+
+    carton: 
+        - las papeleras
+        - hinojosa
+        - rdm
+        - smurfit
+
+    madera: 
+        - finsa
+        - cronospan 
+
+    plasticos: 
+        - big plastic
+        - contenur
+*/
