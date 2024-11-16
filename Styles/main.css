@@ -17,6 +17,7 @@ main{
     margin-bottom: 2%;
 }
 header > a > img{
+    padding-left: 40%;
     height: 40px;
     width: auto;
 }
@@ -89,8 +90,7 @@ main > h1 {
 }
 
 .card > img{
-    width: 30%;
-    padding-right: 5%;
+    width: 40%;
 }
 
 footer{
@@ -125,7 +125,7 @@ html {
     font-size: 20px;
 }
 
-.awards > button {
+button {
     padding: 1%;
     font-size: large;
     
@@ -134,7 +134,8 @@ html {
     border: 0;
     border-radius: 2px;
 }
-.awards > button:hover{
+
+button:hover{
     cursor: pointer;
     background-color: rgb(128,106,155);
 }
@@ -161,6 +162,106 @@ html {
 
 .mapTitle{
     color: rgb(102,102,102);
+}
+
+.left-header{
+    display: flex;
+
+}
+
+.menu{
+    width: 2%;
+    height: 2%;
+    margin-right: 2%;
+}
+
+
+.menu:hover{
+    cursor: pointer;
+
+}
+
+header > nav{
+    position: fixed;
+    left:0;
+    top:0;
+    width: 25%;
+    z-index: 1;
+    height: calc(100vh);
+    background:white;
+    transform:translateX(-100%);
+    transition:.4s ease;
+    padding-top: 3%;
+}
+  
+.navigation li{
+    list-style: none;
+    width: 100%;
+    border-bottom: 1px solid rgba(255,255,255,.5);
+}
+  
+.navigation a{
+    color: var(--main-color);
+    display: block;
+    line-height: 3.5;
+    padding: 0 10px;
+    text-decoration: none;
+    transition: .4s ease;
+}
+  
+.navigation a:hover{
+    transform: translateX(10%);
+}
+  
+#btn-nav{
+    display: none;
+}
+
+#btn-nav:checked ~ nav{
+    transform: translateX(0);
+}
+  
+.btn-nav{
+    color: var(--main-color);
+    font-size: 30px;
+    position: absolute;
+    width: 3%;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+    padding: 6.5px 15px;
+    transition: .2s ease;
+    background: white;
+    position: fixed;
+    z-index: 2;
+    border-radius: 0 0 10px 0px;;
+}
+  
+.btn-nav:hover{
+    background: white;
+}
+/* 
+.events{
+    display: none;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    transition: all .5s ease;
+} */
+.events {
+    display: flex;
+    justify-content: center;
+    overflow: hidden; /* Para que el contenido no se desborde durante la animación */
+    height: 0; /* Altura inicial cuando está oculto */
+    transition: height 0.5s ease; /* Duración y tipo de animación */
+}
+.events.show {
+    height: 60vh; /* Define la altura cuando se muestra */
+}
+.event > h2 {
+    color: rgb(102,102,102);
+}
+.event > button {
+    padding: 2%;
 }
 
 /* 

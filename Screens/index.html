@@ -3,13 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="Scripts/database.js"></script>
     <link rel="stylesheet" href="../Styles/main.css">
     <script src="../Scripts/database.js"></script>
+    <link rel="icon" type="image/png" href="../Images/Icons/favicon.png">
     <title>Adalmo</title>
 </head>
 <body>
     <header>
+        <input type="checkbox" id="btn-nav">
+        <label for="btn-nav" class="btn-nav">
+            <img src="../Images/Icons/menu.png" alt="Icon Menu" width="50%" height="50%"> <!--  class="menu" -->
+        </label>
+        
+        <nav>
+            <ul class="navigation">
+                <li><a href="#sensor">Sensores e inteligencia artificial</a></li>
+                <li><a href="#materials">Materiales reciclados</a></li>
+                <li><a href="#topCompany">Nuestros principales fabricadores</a></li>
+                <li><a href="#eventos">Visitas guiadas</a></li>
+                <li><a href="#map">Donde estamos?</a></li>
+            </ul>
+        </nav>
+
         <a href="https://www.adalmo.es/inicio/" target="_blank">
             <img src="../Images/Logos/fullNameLogo.png" alt="Adalmo Logo">
         </a>
@@ -30,73 +45,120 @@
         <img src="../Images/Others/portada.jpg" alt="Front page" width="100%">
         <h1>Tu compromiso con el medio ambiente empieza aquí</h1>
         <nav>
-            <div class="box border" onclick="location.href='#sello'">
-                <h2>Incentivos</h2>
+            <div class="box border" onclick="location.href='#sensor'">
+                <h2>Sensorores e inteligencia artificial</h2>
             </div>
             <div class="box border" onclick="location.href='#materials'">
-                <h2 >Materiales más reciclados</h2> <!-- Productos reciclados -->
+                <h2 >Materiales reciclados</h2> <!-- Productos reciclados -->
             </div>
             <div class="box border" onclick="location.href='#topCompany'">
-                <h2>Top empresas consumidoras de material reciclado</h2>
+                <h2>Nuestros principales fabricadores</h2>
             </div>
         </nav>
 
         <hr class="divider">
 
-        <div class="card" id="sello">
-            <img src="../Images/Decoration/sello.png" alt="Incentivos">
+        <div class="card" id="sensor">
+            <img src="../Images/Others/contenedorAdalmo.png" alt="Incentivos" style="padding-right: 5%;">
             <div class="cardText">
-                <h2>Incentivos</h2>
-                <ul>
-                    <li>Sello Adalmo</li>
-                    <li>Premios Anuales</li>
-                </ul>
+                <h2>Contenedores e inteligencia artificial</h2>
+                <p>
+                    Los contenedores disponen de sensores de medida de llenado, estos sensores van conectados a una IA que estudia los posibles picos de llenado. Al tener los datos de los picos de llenado y los contenedores ya llenos, podemos optimizar las rutas de recojida, así manteniendo un área limpia donde se encuentren los contenedores y reduciendo las emisiones de transporte.
+                </p>
             </div>
         </div>
 
         <div class="card" id="materials">
             <div class="cardText">
-                <h2>Materiales más reciclados</h2>
+                <h2>Materiales reciclados</h2>
                 <ul>
                     <li>Plásticos</li>
                     <li>Metales y chatarra</li>
                     <li>Papel y carton</li>
+                    <li>Madera</li>
                 </ul>
-                <h2>Productos con materiales reciclados</h2>
-                <ul>
-                    <li>Botellas</li>
-                    <li>...</li>
-                </ul>
+                <p style="padding-right: 1%;">
+                    Muchos más de los materiales que crees se pueden reciclar, por eso trabajamos reciclando plásticos, metales, papel, carton, madera y muchos materiales más. Actualmente estamos trabajando en unas nuevas instalaciones para reciclar material textil, un gran problema que afrontamos actualmente como sociedad.
+                </p>
             </div>
-            <img src="../Images/Decoration/bottle_process.png" alt="Incentivos">
+            <img src="../Images/Others/camion.jpg" alt="Incentivos" width="50%" style="padding-left: 5%;">
         </div>
 
         <div class="card" id="topCompany">
-            <img src="../Images/Decoration/gift.jpg" alt="Incentivos">
+            <img src="../Images/Others/material.png" alt="Incentivos" style="padding-right: 5%;">
             <div class="cardText">
-                <h2>Empresas Top consumidoras de material reciclado</h2>
-                <h4>Estas son las empresas de este mes que mas han usado materials realizados</h4>
-                <ul>
-
-                </ul>
+                <h2>Nuestros principales fabricadores</h2>
+                <div style="display: flex;">
+                    <div style="padding-right: 10%;">
+                        Hierro:
+                        <ul>
+                            <li>Celsa</li>
+                            <li>Metaeles</li>
+                            <li>La farga </li>
+                            <li>Cortizo</li>
+                        </ul>
+                        Madera: 
+                        <ul>
+                            <li>Finsa</li>
+                            <li>Cronospan </li>
+                        </ul>
+                    </div>
+                    <div>
+                        Carton: 
+                        <ul>
+                            <li>Las papeleras</li>
+                            <li>Hinojosa</li>
+                            <li>Rdm</li>
+                            <li>Smurfit</li>
+                        </ul>
+                        
+                        Plasticos: 
+                        <ul>
+                            <li>Big plastic</li>
+                            <li>Contenur</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
 
         <hr class="divider">
 
-        <div class="awards border">
-            <h1>Premios Adalmo</h1>
+        <div class="awards border" id="eventos">
+            <h1>Visitas guiadas</h1>
             <img src="../Images/Logos/longLogo.jpg" alt="Adalmo Logo">
             <p>
-                Estas navidades se realizará el evento anual de los premios Adalmo, los cuales consisten en ofrecer unos certificados unicos para las empresas que más se han beneficiado de nuestros materiales reciclados y que más han aportado al medioambiente. <br> <br> ¡Te invitamos a ver este evento en directo en nuestro canal de youtube!
+                Realizamos visitas interactivas y guiadas por nuestras instalaciones, de esta forma fomentamos la visualización de los materiales reciclados y los procesos a para conseguirlos, también realizamos excursiones escolares dentro de nuestras instalaciones para concienciar a los más pequeños. 
+                <br><br>
+                A continuación os dejamos un enlace el cual contiene nuestro calendario con las proximas visitas ¡esperamos veros pronto!
             </p>
-            <button>
-                Aquí nuestro canal
+            <button onclick="show()">
+                Calendario
             </button>
+            <div class="events">
+                <div class="event" style="width: 30%;">
+                    <h2>Visita guiada por nuestras instalaciones</h2>
+                    <img src="../Images/Others/instalaciones.jpg" alt="Instalaciones Adalmo" width="80%">
+                    <br><br>
+                    <button>Apuntate aquí</button>
+                </div>
+                <div class="event" style="width: 30%;">
+                    <h2>Taller de reciclaje de plastico</h2>
+                    <img src="../Images/Decoration/bottle_process.png" alt="Botella plastico" width="80%">
+                    <br><br>
+                    <button>Apuntate aquí</button>
+                </div>
+                <div class="event" style="width: 30%;">
+                    <h2>Charla con nuestro equipo directivo</h2>
+                    <img src="../Images/Others/coo2.png" alt="Equipo directivo" width="87.5%">
+                    <br><br>
+                    <button>Apuntate aquí</button>
+                </div>
+            </div>
         </div>
         
         <hr class="divider">
-        <h2 class="mapTitle">Encuentranos aqui!</h2>
+        <h2 class="mapTitle" id="map">Encuentranos aqui!</h2>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2919.832591008896!2d2.6836938843442812!3d39.65367809827409!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1297ec8563266f4b%3A0x9fde4087e6237ae6!2sCarrer%20Fonoll%2C%209%2C%2007193%20Bunyola%2C%20Illes%20Balears!5e1!3m2!1ses!2ses!4v1731692622394!5m2!1ses!2ses" class="map" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </main>
     <footer>
